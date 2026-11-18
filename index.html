@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K Trading Room — бесплатное трейдинг-комьюнити</title>
+<meta name="description" content="K Trading Room — бесплатные сигналы, обучение, разборы сделок и live торговые сессии в Telegram.">
+<meta property="og:title" content="K Trading Room">
+<meta property="og:description" content="Сигналы, обучение, разборы и live-сессии. Доступ бесплатный.">
+<meta name="theme-color" content="#040807">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="kWhite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9c7c0"/></linearGradient>
+    <linearGradient id="kGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5dffad"/><stop offset="1" stop-color="#0fbf68"/></linearGradient>
+    <symbol id="klogo" viewBox="0 0 100 100">
+      <polygon points="8,8 28,8 28,30 8,42" fill="url(#kGreen)"/>
+      <polygon points="8,48 28,36 28,92 8,92" fill="url(#kWhite)"/>
+      <polygon points="34,50 74,8 96,8 48,62" fill="url(#kWhite)"/>
+      <polygon points="40,64 54,50 96,92 70,92" fill="url(#kWhite)"/>
+      <polygon points="50,74 57,67 82,92 68,92" fill="url(#kGreen)"/>
+    </symbol>
+    <symbol id="tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 4.3c.3-1.2-.9-2.2-2-1.7L2.8 9.3c-1.2.5-1.2 2.2.1 2.6l4.3 1.4 1.7 5.3c.3 1 1.6 1.3 2.3.5l2.4-2.5 4.6 3.4c.9.7 2.2.2 2.5-.9l3.2-14.8zM9.6 14.4l8.3-7.5c.3-.2.6.2.3.4l-6.9 7.4-.3 3-1.4-3.3z"/></symbol>
+  </defs>
+</svg>
+
+<div class="bg" aria-hidden="true">
+  <div class="bg__grid"></div>
+  <div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div>
+</div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="K Trading Room">
+      <svg><use href="#klogo"/></svg>
+      <span class="logo__txt">K TRADING<small>ROOM</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#offer" data-i18n="nav.offer">Что внутри</a>
+      <a href="#demo" data-i18n="nav.demo">Как работает</a>
+      <a href="#channels" data-i18n="nav.channels">Канал</a>
+      <a href="#trust" data-i18n="nav.trust">Почему мы</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="ru">RU</button><button data-lang="uk">UA</button><button data-lang="en">EN</button>
+    </div>
+    <a class="btn btn--primary btn--sm" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="cta.join">Вступить бесплатно</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__deco" aria-hidden="true">
+      <!-- шахматный конь -->
+      <div class="deco deco--knight" data-depth="28"><svg viewBox="0 0 100 110" class="d-float"><path d="M28 98h48v-9l-6-5c1-14 6-24 5-38C74 28 63 14 46 12l-3-8-7 10c-7 3-13 9-16 17l-8 13c-2 5 3 9 8 6l9-4c5 0 9-2 12-5 1 10-8 18-9 30l4 9-6 4z"/><circle cx="38" cy="30" r="2.6" class="fill"/></svg></div>
+      <!-- шахматный король -->
+      <div class="deco deco--king" data-depth="18"><svg viewBox="0 0 100 110" class="d-float"><path d="M45 4h10v9h9v9h-9v7c11 4 16 13 13 23l-6 26h6v9h4v9H28v-9h4v-9h6l-6-26c-3-10 2-19 13-23v-7h-9v-9h9z"/></svg></div>
+      <!-- биткоин -->
+      <div class="deco deco--btc" data-depth="40"><div class="coin"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="36" class="thin"/><path d="M40 28v44M40 30h14c7 0 11 4 11 9.5S61 49 54 49H40M40 49h16c7 0 12 4 12 10.5S63 70 56 70H40M46 22v8M54 22v8M46 70v8M54 70v8" class="sym"/></svg></div></div>
+      <!-- доллар -->
+      <div class="deco deco--usd" data-depth="34"><div class="coin coin--slow"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="36" class="thin"/><path d="M63 36c-2-5-7-8-13-8-8 0-13 4-13 10 0 14 27 8 27 23 0 6-6 11-14 11-7 0-12-3-14-9M50 20v60" class="sym"/></svg></div></div>
+      <!-- свечи -->
+      <div class="deco deco--candles" data-depth="22"><svg viewBox="0 0 120 100"><g class="c-up"><line x1="15" y1="30" x2="15" y2="90"/><rect x="9" y="45" width="12" height="30"/></g><g class="c-dn"><line x1="40" y1="20" x2="40" y2="75"/><rect x="34" y="30" width="12" height="28"/></g><g class="c-up"><line x1="65" y1="15" x2="65" y2="70"/><rect x="59" y="25" width="12" height="32"/></g><g class="c-up"><line x1="90" y1="4" x2="90" y2="55"/><rect x="84" y="10" width="12" height="34"/></g><polyline points="15,60 40,44 65,40 90,26 112,12" class="trend"/></svg></div>
+      <!-- кольцо -->
+      <div class="deco deco--ring" data-depth="12"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/><circle cx="50" cy="50" r="28" class="thin"/></svg></div>
+      <span class="spark" style="top:18%;left:44%"></span><span class="spark" style="top:72%;left:52%;animation-delay:-1s"></span><span class="spark" style="top:30%;right:4%;animation-delay:-2s"></span><span class="spark" style="top:84%;left:8%;animation-delay:-3s"></span><span class="spark" style="top:12%;left:20%;animation-delay:-1.6s"></span>
+    </div>
+    <div class="container hero__in">
+      <div>
+        <div class="badge reveal"><span class="dot"></span><span data-i18n="hero.badge">Доступ 100% бесплатный</span></div>
+        <div class="hero__brand reveal d1">K TRADING ROOM</div>
+        <h1 class="reveal d1"><span data-i18n="hero.t1">Торгуй</span><br><span class="glow" data-i18n="hero.t2">не в одиночку</span></h1>
+        <p class="hero__sub reveal d2" data-i18n="hero.sub">Сигналы, обучение, разборы сделок и live торговые сессии в Telegram. Без подписок и скрытых платежей — заходи и торгуй вместе с командой.</p>
+        <div class="hero__cta reveal d3">
+          <a class="btn btn--primary" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="hero.cta1">Получить доступ бесплатно</span></a>
+          <a class="btn btn--ghost" href="#demo"><span data-i18n="hero.cta2">Как это работает</span> ↓</a>
+        </div>
+        <div class="hero__note reveal d3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22f08a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.note">Переход в наш Telegram-бот · займёт 10 секунд</span></div>
+        <div class="hero__stats reveal d3">
+          <div class="stat"><b>0 $</b><span data-i18n="hero.s1">стоимость доступа</span></div>
+          <div class="stat"><b>TG</b><span data-i18n="hero.s2">всё в одном Telegram-канале</span></div>
+          <div class="stat"><b>LIVE</b><span data-i18n="hero.s3">торговые сессии</span></div>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal d2">
+        <div class="chip chip--1"><span class="ico">↑</span><div>EUR/USD · CALL<small data-i18n="chip.1">новый сигнал</small></div></div>
+        <div class="terminal">
+          <div class="terminal__in">
+            <div class="terminal__bar">
+              <span class="pair">EUR/USD</span>
+              <span class="tf"><button>M1</button><button class="active">M5</button><button>M15</button></span>
+              <span class="live"><i></i>LIVE DEMO</span>
+            </div>
+            <canvas id="heroChart" aria-label="Animated chart"></canvas>
+            <div class="terminal__foot">
+              <div><span data-i18n="term.price">Цена</span><b id="tPrice">1.08420</b></div>
+              <div><span data-i18n="term.signal">Сигнал</span><b id="tSignal" class="up">—</b></div>
+              <div><span data-i18n="term.result">Итог</span><b id="tResult">—</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="chip chip--2"><span class="ico">✓</span><div>WIN<small data-i18n="chip.2">сделка закрыта</small></div></div>
+        <div class="chip chip--3"><span class="ico">●</span><div>LIVE<small data-i18n="chip.3">сессия в эфире</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIBBONS -->
+  <div class="ribbons" aria-hidden="true">
+    <div class="ribbon ribbon--a"><div class="ribbon__track" data-ribbon="a"></div></div>
+    <div class="ribbon ribbon--b"><div class="ribbon__track" data-ribbon="b"></div></div>
+  </div>
+
+  <!-- OFFER -->
+  <section class="section" id="offer">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="offer.k">Что внутри</span>
+        <h2 data-i18n="offer.t">Всё для старта и роста — бесплатно</h2>
+        <p class="lead" data-i18n="offer.l">Нажми на карточку, чтобы узнать подробнее.</p>
+      </div>
+      <div class="cards">
+        <button class="card reveal" data-modal="signals"><div class="card__in"><span class="free-tag">FREE</span>
+          <div class="card__art"><svg viewBox="0 0 240 120"><polyline class="draw" points="10,95 50,80 80,88 115,55 145,62 180,30 230,20" fill="none" stroke="#22f08a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px #22f08a)"/><g class="bob"><circle cx="180" cy="30" r="7" fill="#22f08a"/><circle cx="180" cy="30" r="14" fill="none" stroke="#22f08a" opacity=".4"/></g><text x="150" y="104" fill="#22f08a" font-size="13" font-weight="800" font-family="Manrope">CALL ↑</text></svg></div>
+          <h3 data-i18n="c1.t">Сигналы</h3><p data-i18n="c1.d">Точки входа с направлением, временем и логикой сделки.</p><span class="card__more"><span data-i18n="more">Подробнее</span><i>→</i></span></div></button>
+        <button class="card reveal d1" data-modal="edu"><div class="card__in"><span class="free-tag">FREE</span>
+          <div class="card__art"><svg viewBox="0 0 240 120"><g fill="#22f08a"><rect class="grow" x="40" y="40" width="22" height="60" rx="4" opacity=".5"/><rect class="grow" x="80" y="30" width="22" height="70" rx="4" opacity=".7" style="animation-delay:-.6s"/><rect class="grow" x="120" y="20" width="22" height="80" rx="4" opacity=".85" style="animation-delay:-1.2s"/><rect class="grow" x="160" y="10" width="22" height="90" rx="4" style="animation-delay:-1.8s"/></g><line x1="30" y1="104" x2="200" y2="104" stroke="#2a4a3c" stroke-width="2"/></svg></div>
+          <h3 data-i18n="c2.t">Обучение</h3><p data-i18n="c2.d">От базы до стратегии: понятный путь без воды.</p><span class="card__more"><span data-i18n="more">Подробнее</span><i>→</i></span></div></button>
+        <button class="card reveal d2" data-modal="reviews"><div class="card__in"><span class="free-tag">FREE</span>
+          <div class="card__art"><svg viewBox="0 0 240 120"><g stroke-width="2"><line x1="40" y1="20" x2="40" y2="100" stroke="#22f08a"/><rect x="33" y="40" width="14" height="40" fill="#22f08a"/><line x1="75" y1="30" x2="75" y2="100" stroke="#ff4d6a"/><rect x="68" y="45" width="14" height="30" fill="#ff4d6a"/><line x1="110" y1="35" x2="110" y2="95" stroke="#22f08a"/><rect x="103" y="50" width="14" height="30" fill="#22f08a"/><line x1="145" y1="15" x2="145" y2="85" stroke="#22f08a"/><rect x="138" y="25" width="14" height="40" fill="#22f08a"/></g><g class="bob"><circle cx="180" cy="55" r="26" fill="none" stroke="#3b8bff" stroke-width="4"/><line x1="198" y1="73" x2="220" y2="95" stroke="#3b8bff" stroke-width="6" stroke-linecap="round"/></g></svg></div>
+          <h3 data-i18n="c3.t">Разборы</h3><p data-i18n="c3.d">Честный разбор сделок — и плюсовых, и минусовых.</p><span class="card__more"><span data-i18n="more">Подробнее</span><i>→</i></span></div></button>
+        <button class="card reveal d3" data-modal="live"><div class="card__in"><span class="free-tag">FREE</span>
+          <div class="card__art"><svg viewBox="0 0 240 120"><rect x="40" y="18" width="160" height="84" rx="12" fill="none" stroke="#2a4a3c" stroke-width="2"/><polygon points="108,42 108,78 138,60" fill="#22f08a" style="filter:drop-shadow(0 0 8px #22f08a)"/><circle class="blinker" cx="62" cy="36" r="5" fill="#ff4d6a"/><text x="72" y="40" fill="#ff4d6a" font-size="11" font-weight="800" font-family="Manrope">LIVE</text></svg></div>
+          <h3 data-i18n="c4.t">Live-сессии</h3><p data-i18n="c4.d">Торговля в прямом эфире: видишь каждое решение.</p><span class="card__more"><span data-i18n="more">Подробнее</span><i>→</i></span></div></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="demo.k">Как это работает</span>
+        <h2 data-i18n="demo.t">Сделка: от анализа до результата</h2>
+        <p class="lead" data-i18n="demo.l">Так выглядит путь одного сигнала. Нажимай на шаги или смотри анимацию целиком.</p>
+      </div>
+      <div class="demo reveal">
+        <div class="steps" id="steps">
+          <button class="step" data-step="0"><span class="step__n">01</span><h4 data-i18n="d1.t">Анализ рынка</h4><p data-i18n="d1.d">Находим ключевой уровень и ждём реакцию цены.</p><span class="step__bar"></span></button>
+          <button class="step" data-step="1"><span class="step__n">02</span><h4 data-i18n="d2.t">Сигнал</h4><p data-i18n="d2.d">Публикуем сигнал: актив, направление, время экспирации.</p><span class="step__bar"></span></button>
+          <button class="step" data-step="2"><span class="step__n">03</span><h4 data-i18n="d3.t">Вход в сделку</h4><p data-i18n="d3.d">Заходим вместе в одно время, с понятным риском.</p><span class="step__bar"></span></button>
+          <button class="step" data-step="3"><span class="step__n">04</span><h4 data-i18n="d4.t">Результат и разбор</h4><p data-i18n="d4.d">Фиксируем итог и разбираем, почему сработало — или нет.</p><span class="step__bar"></span></button>
+        </div>
+        <div class="demo__screen">
+          <div class="demo__top"><span>GBP/USD · M1</span><button class="demo__replay" id="replay">↻ <span data-i18n="demo.replay">Заново</span></button></div>
+          <canvas id="demoChart"></canvas>
+          <div class="demo__note" data-i18n="demo.note">Демонстрационная анимация, не реальная сделка.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNELS -->
+  <section class="section" id="channels">
+    <div class="container">
+      <div class="sec-head sec-head--center reveal">
+        <span class="kicker" data-i18n="ch.k">Telegram-канал</span>
+        <h2 data-i18n="ch.t">Один канал — всё внутри</h2>
+        <p class="lead" data-i18n="ch.l">Всё происходит в нашем Telegram-канале. Вход бесплатный.</p>
+      </div>
+      <div class="chan chan--one reveal">
+        <div class="chan__body">
+          <div class="chan__top">
+            <div class="chan__icon"><svg viewBox="0 0 24 24" fill="none" stroke="#22f08a" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="price"><b>FREE</b></div>
+          </div>
+          <h3>K Trading Room</h3>
+          <p data-i18n="ch1.d">Сердце комьюнити: здесь проходят торговые сессии.</p>
+          <ul>
+            <li data-i18n="ch1.l1">Live торговые сессии</li>
+            <li data-i18n="ch1.l2">Торговые сигналы</li>
+            <li data-i18n="ch1.l3">Обучающие материалы</li>
+            <li data-i18n="ch1.l4">Общение с трейдерами</li>
+          </ul>
+          <a class="btn btn--primary" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="ch1.b">Перейти в канал</span></a>
+        </div>
+        <div class="feed" aria-hidden="true">
+          <div class="feed__head"><svg><use href="#klogo"/></svg><div><b>K Trading Room</b><small data-i18n="feed.sub">Telegram-канал</small></div></div>
+          <div class="feed__list">
+            <div class="msg"><span class="msg__tag msg__tag--live">● LIVE</span><span data-i18n="feed.1">Торговая сессия начинается</span></div>
+            <div class="msg"><span class="msg__tag">CALL ↑</span><span data-i18n="feed.2">Сигнал: EUR/USD · 3 мин</span></div>
+            <div class="msg"><span class="msg__tag msg__tag--win">WIN ✓</span><span data-i18n="feed.3">Сделка закрыта — разбор ниже</span></div>
+            <div class="msg"><span class="msg__tag msg__tag--edu">📚</span><span data-i18n="feed.4">Новый урок: уровни поддержки</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START -->
+  <section class="section" id="start">
+    <div class="container">
+      <div class="sec-head sec-head--center reveal">
+        <span class="kicker" data-i18n="st.k">Старт</span>
+        <h2 data-i18n="st.t">Три шага до комнаты</h2>
+      </div>
+      <div class="start">
+        <div class="start__item reveal"><div class="start__num">1</div><h4 data-i18n="st1.t">Нажми кнопку</h4><p data-i18n="st1.d">Откроется наш Telegram-бот.</p></div>
+        <div class="start__item reveal d1"><div class="start__num">2</div><h4 data-i18n="st2.t">Напиши боту</h4><p data-i18n="st2.d">Бот ответит и выдаст ссылки на каналы.</p></div>
+        <div class="start__item reveal d2"><div class="start__num">3</div><h4 data-i18n="st3.t">Торгуй с нами</h4><p data-i18n="st3.d">Подключайся к сессиям, сигналам и разборам.</p></div>
+      </div>
+      <div class="start__cta reveal"><a class="btn btn--primary" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="cta.join">Вступить бесплатно</span></a></div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section" id="trust">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="tr.k">Почему нам доверяют</span>
+        <h2 data-i18n="tr.t">Прозрачно. Честно. Бесплатно.</h2>
+      </div>
+      <div class="trust">
+        <div class="trust__item reveal"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><h4 data-i18n="tr1.t">Без оплаты</h4><p data-i18n="tr1.d">Не продаём подписки и курсы. Доступ бесплатный для всех.</p></div>
+        <div class="trust__item reveal d1"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h4 data-i18n="tr2.t">Честные разборы</h4><p data-i18n="tr2.d">Показываем и прибыльные, и убыточные сделки.</p></div>
+        <div class="trust__item reveal d2"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></div><h4 data-i18n="tr3.t">Живая торговля</h4><p data-i18n="tr3.d">Сессии в прямом эфире — видно каждое решение.</p></div>
+        <div class="trust__item reveal d3"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4 data-i18n="tr4.t">Безопасность</h4><p data-i18n="tr4.d">Мы никогда не просим пароли, коды и переводы денег.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="sec-head sec-head--center reveal">
+        <span class="kicker">FAQ</span>
+        <h2 data-i18n="faq.t">Частые вопросы</h2>
+      </div>
+      <div class="faq reveal">
+        <details open><summary data-i18n="q1">Это правда бесплатно?</summary><p data-i18n="a1">Да. Общий и VIP-канал, сигналы, обучение и разборы — без оплаты и подписок.</p></details>
+        <details><summary data-i18n="q2">Нужен ли опыт в трейдинге?</summary><p data-i18n="a2">Нет. В канале есть обучение с нуля, а на live-сессиях всё объясняется по ходу.</p></details>
+        <details><summary data-i18n="q3">Как получить доступ к каналам?</summary><p data-i18n="a3">Нажми любую кнопку «Вступить» — откроется наш Telegram-бот, он выдаст ссылки.</p></details>
+        <details><summary data-i18n="q4">Что нужно, чтобы начать?</summary><p data-i18n="a4">Только Telegram. Нажми кнопку, получи ссылку на канал — и ты с нами.</p></details>
+        <details><summary data-i18n="q5">Вы гарантируете прибыль?</summary><p data-i18n="a5">Нет, и никто честный не гарантирует. Трейдинг связан с риском. Мы учим управлять риском и показываем реальные результаты.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="section">
+    <div class="container">
+      <div class="final reveal">
+        <div class="final__k" aria-hidden="true"><svg><use href="#klogo"/></svg></div>
+        <span class="kicker" data-i18n="fin.k">Welcome</span>
+        <h2><span data-i18n="fin.t1">Готов зайти</span> <span class="glow" data-i18n="fin.t2">в комнату?</span></h2>
+        <p data-i18n="fin.d">Сигналы, обучение и live-сессии уже ждут тебя в Telegram. Бесплатно.</p>
+        <a class="btn btn--primary btn--xl" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="fin.b">Перейти в Telegram</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__in">
+      <a href="#top" class="logo"><svg><use href="#klogo"/></svg><span class="logo__txt">K TRADING<small>ROOM</small></span></a>
+      <p class="risk"><b data-i18n="risk.t">Предупреждение о рисках.</b> <span data-i18n="risk.d">Торговля на финансовых рынках связана с высоким риском потери средств. Материалы K Trading Room носят образовательный характер и не являются инвестиционной рекомендацией. Прошлые результаты не гарантируют будущих. Торгуйте только теми средствами, которые готовы потерять.</span></p>
+    </div>
+    <p class="copy">© <span id="year">2026</span> K Trading Room</p>
+  </div>
+</footer>
+
+<a class="fab" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="fab">Написать</span></a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal__box">
+    <button class="modal__close" id="modalClose" aria-label="Close">×</button>
+    <span class="kicker">FREE</span>
+    <h3 id="modalTitle"></h3>
+    <p class="modal__text" id="modalText"></p>
+    <ul id="modalList"></ul>
+    <a class="btn btn--primary" data-bot target="_blank" rel="noopener"><svg><use href="#tg"/></svg><span data-i18n="cta.join">Вступить бесплатно</span></a>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
